@@ -98,42 +98,6 @@
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
     <script>
-        window.changeAdStyle=function(){
-            // Huuuuge block of code to change ad style to the right style, hope this could get smaller in the future
-            var sessionStorageKey = 'activeStylesheetHref';
-            var themeState = sessionStorage.getItem(sessionStorageKey);
-            ethAdDiv = document.querySelector('[data-ea-publisher]');
-            if (themeState == "docs/assets/css/dark.css") {
-            try {
-                ethAdDiv.className = ethAdDiv.className.replace( / dark/, '' )
-            } catch {}
-            try {
-                ethAdDiv.className = ethAdDiv.className.replace( / light/, '' )
-            } catch {}
-            ethAdDiv.className += " dark";
-            return "[EthicalAds Manager] Theme set to Dark.";
-            } else if (themeState == "docs/assets/css/light.css") {
-            try {
-                ethAdDiv.className = ethAdDiv.className.replace( / dark/, '' )
-            } catch {}
-            try {
-               ethAdDiv.className = ethAdDiv.className.replace( / light/, '' )
-                } catch {}
-            ethAdDiv.className += " light";
-            return "[EthicalAds Manager] Theme set to Light.";        
-            } else {
-                try {
-                ethAdDiv.className = ethAdDiv.className.replace( / dark/, '' )
-                } catch {}
-                try {
-                ethAdDiv.className = ethAdDiv.className.replace( / light/, '' )
-                } catch {}
-                ethAdDiv.className += " dark";
-                return "[EthicalAds Manager] Theme set to Default.";
-            }
-        };
-    </script>
-    <script>
         function loadAds(hook, vm) {
         hook.doneEach(function() {
             $(document).ready(() => {
